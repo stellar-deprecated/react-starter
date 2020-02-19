@@ -1,8 +1,27 @@
 {
   "name": "stellar-react-starter",
+  "prettier": "@stellar/prettier-config",
   "version": "0.1.0",
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "yarn install-if-package-changed"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.json": [
+      "prettier --config --write",
+      "git add"
+    ],
+    "src/**/*.ts?(x)": [
+      "prettier --config --write",
+      "eslint --fix --max-warnings 0",
+      "git add"
+    ]
+  },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -12,10 +31,13 @@
     "@types/react-dom": "^16.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "styled-components": "^5.0.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "install-if-package-changed": "git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet yarn.lock && yarn install || exit 0",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +57,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@stellar/eslint-config": "^1.0.3",
+    "@stellar/prettier-config": "^1.0.1",
+    "@stellar/tsconfig": "^1.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react": "^1.1.7",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1"
   }
 }
