@@ -1,6 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styled, { keyframes } from "styled-components";
+
 import logo from "assets/logo.svg";
+
+import { ActionCreators } from "ducks/counter";
+import { useRedux } from "hooks/useRedux";
 
 const logoSpin = keyframes`
 from {
@@ -41,12 +46,17 @@ const LinkEl = styled.a`
 `;
 
 export function Home() {
+  const dispatch = useDispatch();
+  const { counter } = useRedux<{ counter: number }>("counter");
   return (
     <El>
       <HeaderEl>
         <LogoEl src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          The counter is now {counter}.{" "}
+          <button onClick={() => dispatch(ActionCreators.increment())}>
+            Increment
+          </button>
         </p>
         <LinkEl
           className="App-link"
