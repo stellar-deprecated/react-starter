@@ -11,13 +11,11 @@
   },
   "lint-staged": {
     "src/**/*.json": [
-      "prettier --config --write",
-      "git add"
+      "prettier --config --write"
     ],
     "src/**/*.ts?(x)": [
       "prettier --config --write",
-      "eslint --fix --max-warnings 0",
-      "git add"
+      "eslint --fix --max-warnings 0"
     ]
   },
   "dependencies": {
