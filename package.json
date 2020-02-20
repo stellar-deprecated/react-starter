@@ -2,7 +2,6 @@
   "name": "stellar-react-starter",
   "prettier": "@stellar/prettier-config",
   "version": "0.1.0",
-  "private": true,
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
