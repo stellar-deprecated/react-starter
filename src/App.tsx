@@ -3,11 +3,18 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import { Provider } from "react-redux";
+import { createGlobalStyle } from "styled-components";
 
 import { About } from "components/About";
 import { Home } from "components/Home";
 
 import { reducer as counter } from "ducks/counter";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: sans-serif;
+  }
+`;
 
 const store = configureStore({
   reducer: combineReducers({
@@ -20,6 +27,7 @@ export function App() {
     <Provider store={store}>
       <Router>
         <div>
+          <GlobalStyle />
           <nav>
             <ul>
               <li>
