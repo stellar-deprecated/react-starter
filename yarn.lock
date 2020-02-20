@@ -1148,10 +1148,10 @@
   resolved "https://registry.yarnpkg.com/@stellar/prettier-config/-/prettier-config-1.0.1.tgz#498a66dc13c66859e3787dabdf958233ddbe9253"
   integrity sha512-w9OPycQp1XGfmHC2VUHe5shpZjNFRlmsRBaK7IHvOvVpglzV2QNJsVFh8RdLREWA0mzF59AWvQbyUCCJLPfdWw==
 
-"@stellar/tsconfig@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@stellar/tsconfig/-/tsconfig-1.0.1.tgz#71fdb62e9a20a435d4962b906c997ec6927264e6"
-  integrity sha512-dYdEY2chPcD8V2flkG00BTxYUKkIFqTV1n8aIxkdUpSIfnMv8FnixtdLbCb9hRutQgKjIQvHRisUS7yczfjSrw==
+"@stellar/tsconfig@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@stellar/tsconfig/-/tsconfig-1.0.2.tgz#18e9b1a1d6076e116bb405d11fc034401155292d"
+  integrity sha512-lC51QSlYRM8K3oGe0/WGPq+p9+u+yPzwZXSKrZXKOe4sq79vzfiqFbQyp5enOffFzXlahcDyTgY67mBOkJytfw==
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
