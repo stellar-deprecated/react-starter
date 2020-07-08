@@ -1,5 +1,9 @@
 # Stellar React Starter
 
+## First Step
+
+Please upgrade all dependencies on this repo before using it in your project.
+
 ## Available Scripts
 
 In the project directory, you can run:
